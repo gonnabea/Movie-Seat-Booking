@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background-color: #242333;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.signs{
+    color: grey;
+    width: 250px;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.screen{
+    background-color: white;
+    width: 160px;
+    height: 100px;
+    box-shadow: 0 0 20px white;
+}
+
+.sign_none,.sign_selected,.sign_occupied{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
