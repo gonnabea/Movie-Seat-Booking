@@ -14,6 +14,14 @@ body{
     color: white;
 }
 
+.pickAMovie_sel{
+    height: 30px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+
 .signs{
     color: grey;
     width: 200px;
@@ -75,7 +83,6 @@ body{
 }
 
 .seat:focus{
-    background-color: #6FEAF6;
     outline:none;
 }
 

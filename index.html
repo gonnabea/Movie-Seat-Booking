@@ -10,7 +10,7 @@
     <section class="background">
         <section class="pickAMovie">
             <span class="pickAMovie_text">Pick a movie:</span>
-            <select name="pickAMovie_sel" id="">
+            <select class="pickAMovie_sel" id="">
                 <option value="1">Avengers: Endgame ($10)</option>
                 <option value="2">Joker ($12)</option>
                 <option value="3">Toy Story 4 ($8)</option>
@@ -24,38 +24,40 @@
         </section>
         <div class="screen"></div>
         <section class="seats">
-            <div>
-                <span class="seats_left"><button class="seat_occupied"></button><button class="seat"></button></span>
+            <div class="seats_row">
+                <span class="seats_left"><button class="seat_occupied"></button><button class="seat_occupied"></button></span>
                 <span class="seats_mid"><button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_right"><button class="seat"></button><button class="seat"></button></span>
             </div>
-            <div>
+            <div class="seats_row">
+                <span class="seats_left"><button class="seat"></button><button class="seat"></button></span>
+                <span class="seats_mid"><button class="seat_occupied"></button><button class="seat"></button><button class="seat_occupied"></button><button class="seat_occupied"></button></span>
+                <span class="seats_right"><button class="seat_occupied"></button><button class="seat"></button></span>
+            </div>
+            <div class="seats_row">
+                <span class="seats_left"><button class="seat_occupied"></button><button class="seat_occupied"></button></span>
+                <span class="seats_mid"><button class="seat_occupied"></button><button class="seat"></button><button class="seat_occupied"></button><button class="seat_occupied"></button></span>
+                <span class="seats_right"><button class="seat_occupied"></button><button class="seat"></button></span>
+            </div>
+            <div class="seats_row">
                 <span class="seats_left"><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_mid"><button class="seat_occupied"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_right"><button class="seat_occupied"></button><button class="seat"></button></span>
             </div>
-            <div>
-                <span class="seats_left"><button class="seat_occupied"></button><button class="seat"></button></span>
-                <span class="seats_mid"><button class="seat_occupied"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button></span>
-                <span class="seats_right"><button class="seat_occupied"></button><button class="seat"></button></span>
-            </div>
-            <div>
-                <span class="seats_left"><button class="seat"></button><button class="seat"></button></span>
-                <span class="seats_mid"><button class="seat_occupied"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button></span>
-                <span class="seats_right"><button class="seat_occupied"></button><button class="seat"></button></span>
-            </div>
-            <div>
+            <div class="seats_row">
                 <span class="seats_left"><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_mid"><button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_right"><button class="seat"></button><button class="seat"></button></span>
             </div>
-            <div>
+            <div class="seats_row">
                 <span class="seats_left"><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_mid"><button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button></span>
                 <span class="seats_right"><button class="seat"></button><button class="seat"></button></span>
             </div>
         </section>
         <section class="status">You have selected <span class="status_number">0</span> seats for a price of $<span class="status_number">0</span></section>
+        <div class="chosen_seats" id="chosenSeats"></div>
     </section>
+    <script src="index.js"></script>
 </body>
 </html>
