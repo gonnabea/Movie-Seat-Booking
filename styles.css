@@ -38,3 +38,11 @@ body{
     background-color: white;
     border-radius: 10px 10px 0 0;
 }
+
+.seat{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    border:none;
+}
