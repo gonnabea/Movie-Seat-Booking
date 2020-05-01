@@ -16,12 +16,13 @@ body{
 
 .signs{
     color: grey;
-    width: 250px;
+    width: 200px;
     height: 25px;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0,0,0,0.2);
     border-radius: 5px;
+    margin-top: 30px;
 }
 
 .screen{
@@ -29,20 +30,59 @@ body{
     width: 160px;
     height: 100px;
     box-shadow: 0 0 20px white;
+    transform: rotateX(60deg);
 }
 
 .sign_none,.sign_selected,.sign_occupied{
-    position: absolute;
+    margin-left: 20px;
+    margin-right: 10px;
     width: 15px;
     height: 15px;
     background-color: white;
+    color: white;
     border-radius: 10px 10px 0 0;
 }
 
-.seat{
+.sign_none{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0);
+    font-size: 10px;
+}
+
+.sign_selected{
+    background-color: #6FEAF6;
+    color: #6FEAF6;
+    font-size: 10px;
+}
+
+.sign_occupied{
+    font-size: 10px;
+}
+
+.seat,.seat_occupied{
     width: 15px;
     height: 15px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px 10px 0 0;
     border:none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+
+.seat_occupied{
+    background-color: white;
+}
+
+.seat:focus{
+    background-color: #6FEAF6;
+    outline:none;
+}
+
+.seat_occupied{
+    outline: none;
+}
+
+.status_number{
+    color: #6FEAF6;
 }
