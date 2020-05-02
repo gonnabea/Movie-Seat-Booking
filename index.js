@@ -12,13 +12,15 @@ seats.forEach( seat => {
     seat.addEventListener("click", handleClick);
     seat.index = i;
     console.log(seat, i);
-    JSON.parse(localStorage.getItem("selectedSeat")).map(saved => {
-        if(seat.index === saved){
-    seat.style.backgroundColor = "#6FEAF6";
-    seat.addEventListener("click", handleCancel);
-    
-        }
-    })
+    if(localStorage.getItem("selectedSeat")){
+        JSON.parse(localStorage.getItem("selectedSeat")).map(saved => {
+            if(seat.index === saved){
+        seat.style.backgroundColor = "#6FEAF6";
+        seat.addEventListener("click", handleCancel);
+        
+            }
+        })
+    }
     i+=1;
 });
 
