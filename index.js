@@ -12,15 +12,14 @@ seats.forEach( seat => {
     seat.addEventListener("click", handleClick);
     seat.index = i;
     console.log(seat, i);
-    if(localStorage.getItem("selectedSeat")){
-        JSON.parse(localStorage.getItem("selectedSeat")).map(saved => {
+    selectedSeats.map(saved => {
             if(seat.index === saved){
         seat.style.backgroundColor = "#6FEAF6";
         seat.addEventListener("click", handleCancel);
         
             }
         })
-    }
+    
     i+=1;
 });
 
@@ -72,10 +71,10 @@ function handleSelect(e){
 }
 
 function calculate(){
-   const length = JSON.parse(localStorage.getItem("selectedSeat")).length;
+   const length = selectedSeats.length;
    selectedNum.innerHTML = length;
-   price.innerHTML = length * localStorage.getItem("moviePrice");
-   movieSelect.value = localStorage.getItem("selectedMovie");
+   price.innerHTML = length * (localStorage.getItem("moviePrice") || 10);
+   movieSelect.value = localStorage.getItem("selectedMovie") || 1;
 }
 
 
